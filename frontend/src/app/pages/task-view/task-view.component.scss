@@ -1,0 +1,198 @@
+
+@import '../../../main.scss';
+:root {
+    --turquoise: #44ddd0;
+    --blue: #276dd7;
+    --dark-blue: #1985e4;
+    --danger: #e27e7e;
+    --light: #f4f4f4;
+  
+    --family-sans-serif: "Nunito", sans-serif;
+  
+    --primary: var(--blue);
+    --control-border-width: 2px;
+    --input-border-color: transparent;
+    --input-shadow: none;
+  }
+  
+  html,
+  body {
+    background: linear-gradient(to right top, grey, black);
+    font-family: "Nunito";
+    height: 100%;
+  }
+  
+  .white-text {
+    color: white;
+  }
+  
+  .title {
+    color: white;
+    font-family: "Lato";
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .modal-box {
+    min-height: 200px;
+    width: 100%;
+    max-width: 500px;
+    background: #201d1d;
+    border-radius: 5px;
+    padding: 35px;
+  }
+  
+  .has-background-light {
+    background: var(--light);
+  }
+  
+  .is-primary {
+    background: var(--primary);
+  }
+  
+  .task-manager-container {
+    display: flex;
+    margin: 25px;
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+    max-height: 500px;
+  }
+  
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 100%;
+    background: #201d1d;
+    padding: 42px;
+    border-radius: 8px 0px 0px 8px;
+  }
+  
+  .task-list-container {
+    background: #110f0f;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 42px;
+    border-radius: 0px 8px 8px 0px;
+    overflow: auto;
+  }
+  
+  .list-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    flex-grow: 1;
+    overflow: auto;
+  }
+  
+  .list-menu .list-menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 100%;
+    color: #5f5f5f;
+    margin-bottom: 5px;
+  }
+  
+  .list-menu .list-menu-item p {
+    margin: 0px;
+    width: 100%;
+  }
+  
+  .list-menu .list-menu-item:active {
+    background-color: #101010;
+    color: var(--dark-blue);
+  }
+  
+  .task {
+    background: #ffffff;
+    padding: 15px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: box-shadow 0.5 ease, transform 0.3s ease;
+    user-select: none;
+  }
+  
+  .task:not(.complete):active {
+    transform: scale(0.95);
+  }
+  
+  .task:not(.complete):hover {
+    box-shadow: 0px 0px 5px #cccccc;
+  }
+  
+  .task:hover {
+    cursor: pointer;
+  }
+  
+  .task.complete {
+    text-decoration: line-through #000000;
+    opacity: 0.5;
+  }
+  
+  .circle-add-button {
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 50px;
+  }
+  
+  .add-button {
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .btn-rounded-corners {
+    border-radius: 25px;
+  }
+  
+  .task p {
+    margin: 0px;
+  }
+  
+  .task {
+    background-color: #201d1d;
+  }
+  
+  .pull-right {
+    float: right;
+  }
+  
+  .task-delete:hover {
+    color: red;
+  }
+  
+  .task-delete {
+    padding: 0px 5px;
+  }
+
+  .list-delete:hover {
+    color: orange;
+  }
+  
+  .list-delete {
+    padding: 0px 5px;
+  }
+  
+  a.list-menu-item:hover {
+    text-decoration: none;
+  }
